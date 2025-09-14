@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from './Pages/Signup';
+import Profile from './Pages/Profile';
 
 const App = () => {
   return (
@@ -22,6 +23,11 @@ const App = () => {
             <Route
             path='login'
             element={<Login/>}
+            />
+
+            <Route
+            path='profile'
+            element={<Profile/>}
             />
 
           </Routes>

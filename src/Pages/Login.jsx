@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import axios from 'axios'
 
 const Login = () => {
     const containerRef = useRef(null)
@@ -7,6 +9,9 @@ const Login = () => {
     const logoRef = useRef(null)
     const titleRef = useRef(null)
     const inputRefs = useRef([])
+
+    
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
@@ -94,8 +99,40 @@ const Login = () => {
                         >
                             Welcome Back
                         </h2>
-                        
-                        <form className="space-y-6">
+
+                        {/* <Formik
+                            initialValues={{email: '', password: ''}}
+                            validate={values =>{
+                                const errors ={};
+                                if(!values.email){
+                                    errors.email = 'Required'
+                                }
+                                return errors;
+                            }}
+                            onSubmit={(values) => {
+                                axios.post('http://localhost:3000/')
+                                    .then(response => {
+                                        console.log(response.data);
+                                    })
+                            }}
+                        >
+
+                            {() => (
+                                <Form method='POST' >
+                                    <label>Email:</label>
+                                    <Field name="email" type="email"></Field>
+                                    <ErrorMessage name="email" component = "div"></ErrorMessage>
+
+                                    <label>Password:</label>
+                                    <Field name="password" type="password"></Field>
+                                    <ErrorMessage name='password' component='div'></ErrorMessage>
+
+                                    <button type='submit' >Submit</button>
+                                </Form>
+                            )}
+
+                        </Formik> */}
+                         <form className="space-y-6" action='http://localhost:3000/' method='post'>
                             <div className="relative">
                                 <input 
                                     ref={el => inputRefs.current[0] = el}
