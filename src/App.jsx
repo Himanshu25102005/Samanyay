@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from './Pages/Signup';
 import Profile from './Pages/Profile';
+import Sub from './Pages/Sub';
 
 const App = () => {
   return (
@@ -28,6 +29,11 @@ const App = () => {
             <Route
             path='profile'
             element={<Profile/>}
+            />
+
+            <Route
+            path='sub'
+            element={<Sub/>}
             />
 
           </Routes>

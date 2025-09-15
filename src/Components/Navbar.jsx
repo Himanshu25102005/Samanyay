@@ -13,12 +13,12 @@ const Navbar = () => {
       ]
     },
     {
-      label: "Projects", 
+      label: "Upgrade To Pro", 
       bgColor: "#170D27",
       textColor: "#fff",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" }
+        { label: "Basic Plan"},
+        { label: "Premium Plan" }
       ]
     },
     {
@@ -33,7 +33,8 @@ const Navbar = () => {
     }
   ];
 
-  const logo = "Your Logo"; // Add your actual logo here
+  // For now, let's use a simple text logo or create a placeholder
+  const logo = "https://via.placeholder.com/120x40/4285F4/ffffff?text=LOGO"; // Placeholder logo
 
   return (
     <CardNav

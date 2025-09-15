@@ -211,9 +211,9 @@ const Signup = () => {
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                         </div>
-                        <h3 className="text-2xl font-bold mb-4">Your Brand</h3>
+                        <h3 className="text-2xl font-bold mb-4">Samanyay</h3>
                         <p className="text-blue-100 leading-relaxed">
-                            Welcome to our platform. Sign in to access your account and continue your journey with us.
+                            Bridging the Gap to Equitable Justice with AI-Powered Legal Assistance
                         </p>
                     </div>
                 </div>
@@ -223,3 +223,53 @@ const Signup = () => {
 }
 
 export default Signup
+
+
+
+
+/* const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    registrationDate: "2024-01-15",
+    plan: "Free", // or "Pro"
+    avatar: "",
+    totalCases: 0,
+    storageUsed: 2.4, // GB
+    storageLimit: 5.0 // GB for Free plan
+  }) */
+
+
+    /* useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/profile", {
+          withCredentials: true
+        });
+
+        console.log("API Response:", response.data);
+
+        // Transform API data to match your state structure
+        const apiData = response.data;
+        const user = apiData.user || apiData;
+
+        setUserData({
+          name: user.name || "",
+          email: user.email || "",
+          registrationDate: "2024-01-15", // You might need to get this from API
+          plan: "Free", // You might need to get this from API
+          avatar: user.profileImage || "",
+          totalCases: user.cases ? user.cases.length : 0,
+          storageUsed: 2.4, // You might need to calculate this
+          storageLimit: 5.0 // You might need to get this from API
+        });
+
+
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+        setError("Failed to load user data. Please check your connection.");
+
+      }
+    };
+
+    fetchUserData();
+  }, []); */
